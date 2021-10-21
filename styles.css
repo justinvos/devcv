@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  margin: 0;
+
+
+  background-color: #12131A;
+}
+
+header {
+  padding: 48px 32px 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+h2 {
+  border-bottom: #252833 solid 1px;
+  color: white;
+  font-size: 28px;
+  padding-bottom: 48px;
+}
+
+h2 span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  padding: 0 32px;
+  max-width: 900px;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+h1 span {
+  color: white;
+  font-size: 28px;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 28px;
+    line-height: 54px;
+  }
+  h1 span {
+    font-size: 48px;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  .actions {
+    flex-direction: row;
+  }
+
+  button.secondary {
+    margin-top: 0;
+  }
+}
+
+button {
+  border-radius: 2px;
+  box-shadow: black 0 2px 4px 0;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 52px;
+  font-size: 18px;
+  font-weight: 700;
+  width: 200px;
+}
+
+button.primary {
+  background-color: #8E44AD;
+  border: none;
+  
+  transition: background-color 0.3s;
+}
+
+button.primary:hover {
+  background-color: #793A94;
+}
+
+del {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button.secondary {
+  background-color: transparent;
+  border: white solid 1px;
+  margin-top: 12px;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+button.secondary:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  /* transition: background-color 0.2s; */
+}
+
+@media (min-width: 700px) {
+  button.secondary {
+    margin-top: 0;
+    margin-left: 32px;
+  }
+}
+
+.backpiece {
+  background-color: white;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+img {
+  padding-top: 24px;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .md-hide {
+    display: none;
+  }
+}
