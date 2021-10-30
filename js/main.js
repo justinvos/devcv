@@ -25,7 +25,9 @@ initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
+const uploadText = document.getElementById("uploadText");
 const fileInput = document.getElementById("file_input");
+const submitButton = document.getElementById("submit");
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -49,8 +51,17 @@ async function handleSubmit(event) {
 
   await setDoc(docRef, data);
 
-  // done
+  window.location = "https://devcv.co.nz/done";
 }
+
+function handleFileChange(event) {
+  console.log("handleFileChange", event);
+  submitButton.classList.remove("visuallyHidden");
+  uploadText.innerHTML = event.target.files[0].name;
+}
+
+fileInput.addEventListener("change", handleFileChange);
+console.log("fileInput", fileInput);
 
 const form = document.getElementById("form");
 form.addEventListener("submit", handleSubmit);

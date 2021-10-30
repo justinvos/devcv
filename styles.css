@@ -9,12 +9,11 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   height: 100vh;
   margin: 0;
 
-
-  background-color: #12131A;
+  background-color: #12131a;
 }
 
 header {
@@ -24,7 +23,7 @@ header {
 }
 
 h2 {
-  border-bottom: #252833 solid 1px;
+  border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
   color: white;
   font-size: 28px;
   padding-bottom: 48px;
@@ -80,16 +79,19 @@ h1 span {
     flex-direction: row;
   }
 
-  button.secondary {
+  .button--secondary {
     margin-top: 0;
   }
 }
 
-button {
+.button {
+  align-items: center;
   border-radius: 2px;
   box-shadow: black 0 2px 4px 0;
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   height: 52px;
   font-size: 18px;
@@ -97,39 +99,32 @@ button {
   width: 200px;
 }
 
-button.primary {
-  background-color: #8E44AD;
+.button--primary {
+  background-color: #8e44ad;
   border: none;
-  
+
   transition: background-color 0.3s;
 }
 
-button.primary:hover {
-  background-color: #793A94;
+.button--primary:hover {
+  background-color: #793a94;
 }
 
 del {
   color: rgba(255, 255, 255, 0.6);
 }
 
-button.secondary {
+.button--secondary {
   background-color: transparent;
   border: white solid 1px;
   margin-top: 12px;
   transition: border-color 0.3s, color 0.3s;
 }
 
-button.secondary:hover {
+.button--secondary:hover {
   border-color: rgba(255, 255, 255, 0.8);
   color: rgba(255, 255, 255, 0.8);
   /* transition: background-color 0.2s; */
-}
-
-@media (min-width: 700px) {
-  button.secondary {
-    margin-top: 0;
-    margin-left: 32px;
-  }
 }
 
 .backpiece {
@@ -147,8 +142,71 @@ img {
   width: 100%;
 }
 
+.visuallyHidden {
+  visibility: hidden;
+}
+
 @media (min-width: 700px) {
   .md-hide {
     display: none;
   }
+}
+
+@media (min-width: 700px) {
+  .landing__preview {
+    margin-top: 0;
+    margin-left: 32px;
+  }
+}
+
+input {
+  display: none;
+}
+
+.review__main {
+  margin-top: -155px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.review__heading {
+  color: white;
+  font-size: 28px;
+}
+
+#uploadText {
+  padding: 0 8px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.review__submit {
+  margin-top: 12px;
+}
+
+.done {
+  background-color: #8e44ad;
+}
+
+.done__main {
+  justify-content: center;
+  margin-top: -155px;
+}
+
+.done__heading {
+  color: white;
+  font-size: 28px;
+  padding: 0;
+  padding-bottom: 16px;
+}
+
+.done__paragraph {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
