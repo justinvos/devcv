@@ -85,13 +85,10 @@ h1 span {
 }
 
 .button {
-  align-items: center;
   border-radius: 2px;
   box-shadow: black 0 2px 4px 0;
   color: white;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
   text-transform: uppercase;
   height: 52px;
   font-size: 18px;
@@ -175,6 +172,12 @@ input {
 .review__heading {
   color: white;
   font-size: 28px;
+}
+
+.review__upload {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 #uploadText {
